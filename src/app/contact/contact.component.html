@@ -1,0 +1,64 @@
+<div class="contact">
+  <h1>Contact</h1>
+  <div class="map-address">
+    <img
+      src="https://www.welcometravel.gr/wp-content/uploads/welcome-fb.png"
+      class="centerImage"
+      width="1000"
+      height="250"
+    />
+  </div>
+  <address>
+    HDM TRAVLES <a href="mailto:webmaster@example.com">HDM</a>.<br />
+    Visit us at:<br />
+    2/111 bharathi strret<br />
+    Box 564, chennai<br />
+    hdm@gmail.com<br />
+    9757957930
+  </address>
+
+  <div class="map-address">
+    <img
+      src="https://cutewallpaper.org/24/traveling-png/logo-traveling-png-travels-logo-png-free-transparent-png-download--pngkey.png"
+      width="900"
+      height="200"
+    />
+  </div>
+
+  <div class="add-Testimonials">
+    <div class="add-fields">
+      <label
+        >Name:
+        <input [(ngModel)]="name" placeholder="Your name" />
+      </label>
+      <label
+        >Reviews:
+        <input
+          [(ngModel)]="message"
+          placeholder="Your review about our travels"
+        />
+      </label>
+    </div>
+
+    <fieldset class="preview">
+      <legend>Preview</legend>
+      <p>Name: {{ name }}</p>
+      <p>Review: {{ message }}</p>
+      <hr />
+      <div>
+        <button class="btn" (click)="addTestimonial(name, message)">
+          Share your experience
+        </button>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="testimonials">
+    <h3>Testimonials</h3>
+    <hr />
+    <div class="testimonial" *ngFor="let testimonial of testimonials">
+      <div class="message">"{{ testimonial.message }}"</div>
+      <div class="name">{{ testimonial.name }}</div>
+    </div>
+  </div>
+</div>
